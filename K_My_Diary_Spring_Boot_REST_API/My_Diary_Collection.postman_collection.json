@@ -1,0 +1,911 @@
+{
+	"info": {
+		"_postman_id": "a9c35511-3c94-4ac4-8c75-d6ff2989e14e",
+		"name": "My_Diary_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2736887"
+	},
+	"item": [
+		{
+			"name": "User Request",
+			"item": [
+				{
+					"name": "Save A User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "srini",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"username\": \"sai1711\",\r\n        \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{User}}/users/",
+							"host": [
+								"{{User}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{User}}/users/",
+							"host": [
+								"{{User}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{User}}/users/1",
+							"host": [
+								"{{User}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"username\": \"sai2267uu\",\r\n        \"password\": \"1234456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{User}}/users/4",
+							"host": [
+								"{{User}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{User}}/users/7",
+							"host": [
+								"{{User}}"
+							],
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User data Partial update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \r\n\t\"password\":\"12344567\"\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/K_My_Diary_Spring_Boot_REST_API/users/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"K_My_Diary_Spring_Boot_REST_API",
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entries Request",
+			"item": [
+				{
+					"name": "Save A Entry",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "srini",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"entrydate\": \"2025-08-23\",\r\n\t\"description\": \"Hi This is my first Post man request from post method form post\",\r\n\t\"userid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Entries}}/entries/",
+							"host": [
+								"{{Entries}}"
+							],
+							"path": [
+								"entries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Entries",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Entries}}/entries/",
+							"host": [
+								"{{Entries}}"
+							],
+							"path": [
+								"entries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Entry by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Entries}}/entries/20",
+							"host": [
+								"{{Entries}}"
+							],
+							"path": [
+								"entries",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update an Entry",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "srini",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"entrydate\": \"2025-08-23\",\r\n\t\"description\": \"Hi This is my first Post Man Hi Man\",\r\n\t\"userid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Entries}}/entries/22",
+							"host": [
+								"{{Entries}}"
+							],
+							"path": [
+								"entries",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Entity",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "sai",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Entries}}/entries/26",
+							"host": [
+								"{{Entries}}"
+							],
+							"path": [
+								"entries",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Entries data Partial update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \r\n\t\"userid\":4\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/K_My_Diary_Spring_Boot_REST_API/entries/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"K_My_Diary_Spring_Boot_REST_API",
+								"entries",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT Request",
+			"item": [
+				{
+					"name": "JWT token login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseData = pm.response.text(); \r",
+									"pm.environment.set(\"jwt_token\", responseData); \r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\":\"sai\",\r\n    \"password\":1234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JWT}}/users/login",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a JWT USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \r\n        \"username\": \"Mohan\",\r\n        \"password\": \"1234\",\r\n        \"designation\": \"ROLE_CA\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JWT}}/users/?token={{jwt_token}}",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All JWT USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JWT}}/users/?token={{jwt_token}}",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get JWT USER by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JWT}}/users/1?token={{jwt_token}}",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put a JWT USER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \r\n        \"username\": \"venkat\",\r\n        \"password\": \"1234\",\r\n        \"designation\": \"ROLE_TEACHER\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JWT}}/users/6?token={{jwt_token}}",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								"6"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a JWT USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{JWT}}/users/5?token={{jwt_token}}",
+							"host": [
+								"{{JWT}}"
+							],
+							"path": [
+								"users",
+								"5"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SpringBoot_Microservices",
+			"item": [
+				{
+					"name": "Patient Requests",
+					"item": [
+						{
+							"name": "Get All Patients",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Patient}}/patient/",
+									"host": [
+										"{{Patient}}"
+									],
+									"path": [
+										"patient",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post a Patient record",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"patientname\": \"sai srinivas\",\r\n        \"address\": \"Guduru ,Mukkollu\",\r\n        \"contact\": 23451,\r\n        \"details\": \"back blank bain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Patient}}/patient/",
+									"host": [
+										"{{Patient}}"
+									],
+									"path": [
+										"patient",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Patient by pid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Patient}}/patient/4",
+									"host": [
+										"{{Patient}}"
+									],
+									"path": [
+										"patient",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put a Patient record",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"patientname\": \"sai123\",\r\n        \"address\": \"Delhi\",\r\n        \"contact\": 97041,\r\n        \"details\": \"Having stomach pain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Patient}}/patient/1",
+									"host": [
+										"{{Patient}}"
+									],
+									"path": [
+										"patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Patient record",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Patient}}/patient/5",
+									"host": [
+										"{{Patient}}"
+									],
+									"path": [
+										"patient",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Doctor Consultation Requests",
+					"item": [
+						{
+							"name": "Get All Doctors Consultations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Doctor}}/doctor/",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Doctor consultations for the PatientId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Doctor}}/doctor/pid/4",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										"pid",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post a Doctor Consultation  record",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"doctorname\": \"Raghu\",\r\n        \"patientid\": 4,\r\n        \"observation\": \"Jondis\",\r\n        \"medication\": \"jondis tab\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Doctor}}/doctor/",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Doctor Consultation  by pid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Doctor}}/doctor/1",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put a Doctor Consultation  record",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorname\": \"Kiran Kumar\",\r\n    \"patientid\":  4,\r\n    \"observation\": \"Motions...\",\r\n    \"medication\": \"motion\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Doctor}}/doctor/3",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Doctor Consultation  record",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Doctor}}/doctor/5",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "From Doctor Consultation Delete Patient Record by Patient Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Doctor}}/doctor/pid/6",
+									"host": [
+										"{{Doctor}}"
+									],
+									"path": [
+										"doctor",
+										"pid",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
